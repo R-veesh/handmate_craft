@@ -1,0 +1,102 @@
+/* Add Product Page Styles */
+
+/* Form container styles */
+form {
+    background: white;
+    max-width: 600px; /* Limit the width of the form */
+    margin: 2rem auto; /* Center the form */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group styles */
+form div {
+    margin-bottom: 1.5rem; /* Spacing between form groups */
+}
+
+/* Form labels */
+form label {
+    display: block; /* Block level for proper spacing */
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* Input fields */
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 0.8rem 1rem; /* Padding for comfort */
+    border: 2px solid #e4e9f2; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: all 0.3s ease; /* Transition for focus effects */
+}
+
+/* Focus effects for inputs */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none; /* Remove default outline */
+    border-color: #4776E6; /* Border color on focus */
+    box-shadow: 0 0 0 3px rgba(71, 118, 230, 0.1); /* Shadow effect */
+}
+
+/* Textarea specific styles */
+form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Success and error messages */
+.success {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    color: #155724;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+}
+
+.error {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to right, #4776E6, #8E54E9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Submit button hover effects */
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #3665d5, #7d43d8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(71, 118, 230, 0.2);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}

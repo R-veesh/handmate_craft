@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #E0F7FA, #B2EBF2, #80DEEA);
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+    position: relative;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #80DEEA, #B2EBF2, #E0F7FA);
+    border-radius: 28px;
+    z-index: -1;
+    filter: blur(24px);
+    opacity: 0.6;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+    color: #00838F;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    color: #00838F;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Security Question Select Styles */
+select#security_question {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+    appearance: none; /* Removes default browser styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M1 4l5 5 5-5z' fill='%23999'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select#security_question:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+select#security_question:hover {
+    border-color: #007bff;
+}
+
+/* Placeholder-like style for default option */
+select#security_question option[value=""] {
+    color: #999;
+}
+
+/* Ensure consistent styling with other form inputs */
+select#security_question,
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #B2EBF2;
+    border-radius: 12px;
+    color: #00838F;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus{
+    outline: none;
+    border-color: #00ACC1;
+    box-shadow: 0 0 0 4px rgba(0, 172, 193, 0.1);
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #00ACC1, #00BCD4);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 172, 193, 0.2);
+}
+
+.error-message {
+    background: rgba(255, 82, 82, 0.1);
+    color: #FF5252;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid rgba(255, 82, 82, 0.2);
+}
+
+.register-link {
+    margin-top: 24px;
+    text-align: center;
+    color: #00838F;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #00ACC1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #00838F;
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="submit"] {
+        padding: 12px;
+    }
+}
